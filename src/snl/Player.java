@@ -8,6 +8,7 @@ public class Player {
     private boolean winner;
     public static void Reset()
     {
+        System.out.println("reset");
         players[0] = new Player(Color.red);
         players[1] = new Player(Color.black);
         players[2] = new Player(Color.black);
@@ -42,6 +43,10 @@ public class Player {
             currentTurn = players[0];
     }
     
+    public void Method(){}
+                    public void Method2(){}
+
+
     Player(Color _color)
     {
         winner = false;
