@@ -1,4 +1,4 @@
-package SnL;
+package snl;
 
 import java.io.*;
 import java.awt.*;
@@ -10,7 +10,6 @@ public class SnL extends JFrame implements Runnable {
     boolean animateFirstTime = true;
     Image image;
     Graphics2D g;
-    
 
     public static void main(String[] args) {
         SnL frame = new SnL();
@@ -24,12 +23,11 @@ public class SnL extends JFrame implements Runnable {
             public void mousePressed(MouseEvent e) {
 
                 if (e.BUTTON1 == e.getButton() ) {
-                    Board.AddPiece(e.getX(),e.getY());
+                    
                 }
 
                 if (e.BUTTON3 == e.getButton()) {
-                    Board.RemovePiece(e.getX(),e.getY());
-                    
+
                 }
                 repaint();
             }
@@ -58,7 +56,6 @@ public class SnL extends JFrame implements Runnable {
                 } else if (e.VK_LEFT == e.getKeyCode()) {
                 } else if (e.VK_RIGHT == e.getKeyCode()) {
                 } else if (e.VK_ESCAPE == e.getKeyCode()) {
-                    System.out.println("you can try but you can't run forever");
                     reset();
                 }
                 repaint();
@@ -128,8 +125,6 @@ public class SnL extends JFrame implements Runnable {
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
         Board.Reset();
-        Player.Reset();
-
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {
