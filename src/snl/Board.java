@@ -2,7 +2,7 @@ package snl;
 import java.awt.*;
 
 public class Board {
-    static Image ladderImage;
+   // static Image ladderImage;
     private final static int NUM_ROWS = 10;
     private final static int NUM_COLUMNS = 10;      
     private static Piece board[][] = new Piece[NUM_ROWS][NUM_COLUMNS];
