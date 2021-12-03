@@ -58,6 +58,7 @@ public class SnL extends JFrame implements Runnable {
                 } else if (e.VK_LEFT == e.getKeyCode()) {
                 } else if (e.VK_RIGHT == e.getKeyCode()) {
                 } else if (e.VK_ESCAPE == e.getKeyCode()) {
+                    System.out.println("you can try but you can't run forever");
                     reset();
                 }
                 repaint();

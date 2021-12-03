@@ -83,8 +83,7 @@ public class Board {
             return;         
         
         Player currentPlayer = Player.GetCurrentTurn();
-
-        board[row][column] = new OvalPiece(currentPlayer.getColor());
+        System.out.println("yes");
         
         
         
@@ -130,7 +129,6 @@ public class Board {
                     numInARow++;
                     if (numInARow == numConnected)  //if we have a win
                     {
-                        highlight = new Highlight(wrow, wcolumn, numInARow, Highlight.Direction.Right);                          
                         return currentColor;
                     }
                 }
@@ -161,7 +159,6 @@ public class Board {
                     numInARow++;
                     if (numInARow == numConnected)  //if we have a win
                     {
-                        highlight = new Highlight(wrow, wcolumn, numInARow, Highlight.Direction.Down);                                                  
                         return currentColor;
                     }
                 }
@@ -189,7 +186,6 @@ public class Board {
                 board[zrow][zcol] = null;  
 
         
-        highlight = null;     
     }
     
     public static void Draw(Graphics2D g) {
@@ -197,8 +193,7 @@ public class Board {
         int ydelta = Window.getHeight2()/NUM_ROWS;
         int xdelta = Window.getWidth2()/NUM_COLUMNS;
 
-        if (highlight != null)
-            highlight.draw(g,xdelta,ydelta);
+        
         
         g.setColor(Color.black);
         for (int zi = 1;zi<NUM_ROWS;zi++)
