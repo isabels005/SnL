@@ -83,7 +83,6 @@ public class Board {
             return;         
         
         Player currentPlayer = Player.GetCurrentTurn();
-        System.out.println("yes");
         
         
         
