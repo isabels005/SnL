@@ -8,5 +8,4 @@ Nico
 -
 
 Sam
--Board design
 -

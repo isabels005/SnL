@@ -11,6 +11,12 @@ public class SnL extends JFrame implements Runnable {
     Image image;
     Graphics2D g;
 
+    Image bwSnakeHiss;
+    Image bwSnakeUp;
+    Image bwSnakeRight;
+    Image bwSnakeLeft;
+    Image smolSnake;
+    
     public static void main(String[] args) {
         SnL frame = new SnL();
         frame.setSize(Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT);
@@ -100,10 +106,17 @@ public class SnL extends JFrame implements Runnable {
             gOld.drawImage(image, 0, 0, null);
             return;
         }
-        
-              
+
+      //  g.drawImage(Board.ladderImage,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+
         Board.Draw(g);
 
+    //    g.drawImage(bwSnakeHiss,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+        g.drawImage(bwSnakeUp,200,200,100,100,this);
+    //    g.drawImage(bwSnakeRight,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+    //    g.drawImage(bwSnakeLeft,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+    //    g.drawImage(smolSnake,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+        
         gOld.drawImage(image, 0, 0, null);
     }
 
@@ -136,6 +149,12 @@ public class SnL extends JFrame implements Runnable {
                 Window.ysize = getSize().height;
             }
 
+            bwSnakeHiss = Toolkit.getDefaultToolkit().getImage("./bwSnakeHiss");
+            bwSnakeUp = Toolkit.getDefaultToolkit().getImage("./bwSnakeUp");
+            bwSnakeRight = Toolkit.getDefaultToolkit().getImage("./bwSnakeRight");
+            bwSnakeLeft = Toolkit.getDefaultToolkit().getImage("./bwSnakeLeft");
+            smolSnake = Toolkit.getDefaultToolkit().getImage("./smolSnake");
+            
             reset();
 
         }

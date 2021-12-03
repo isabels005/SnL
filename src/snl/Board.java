@@ -2,6 +2,7 @@ package snl;
 import java.awt.*;
 
 public class Board {
+   // static Image ladderImage;
     private final static int NUM_ROWS = 10;
     private final static int NUM_COLUMNS = 10;   
     static int Num = 1;
