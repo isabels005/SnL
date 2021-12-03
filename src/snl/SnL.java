@@ -100,8 +100,9 @@ public class SnL extends JFrame implements Runnable {
             gOld.drawImage(image, 0, 0, null);
             return;
         }
-        
-              
+
+        g.drawImage(Board.ladderImage,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+      
         Board.Draw(g);
 
         gOld.drawImage(image, 0, 0, null);
