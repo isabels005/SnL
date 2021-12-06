@@ -10,7 +10,10 @@ public class SnL extends JFrame implements Runnable {
     boolean animateFirstTime = true;
     Image image;
     Graphics2D g;
-
+    
+    //ladder image
+    Image ladderImage;
+    //snake images
     Image bwSnakeHiss;
     Image bwSnakeUp;
     Image bwSnakeRight;
@@ -109,8 +112,7 @@ public class SnL extends JFrame implements Runnable {
 
         Board.Draw(g);
 
-        //g.drawImage(Board.ladderImage,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);        
-        
+        g.drawImage(ladderImage,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);        
         g.drawImage(bwSnakeHiss,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
         g.drawImage(bwSnakeUp,200,200,100,100,this);
         g.drawImage(bwSnakeRight,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
@@ -148,6 +150,7 @@ public class SnL extends JFrame implements Runnable {
                 Window.xsize = getSize().width;
                 Window.ysize = getSize().height;
             }
+            ladderImage = Toolkit.getDefaultToolkit().getImage("./ladder.png");  
 
             bwSnakeHiss = Toolkit.getDefaultToolkit().getImage("./bwSnakeHiss.png");
             bwSnakeUp = Toolkit.getDefaultToolkit().getImage("./bwSnakeUp.png");
