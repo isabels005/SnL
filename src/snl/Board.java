@@ -47,7 +47,8 @@ public class Board {
             if (Num <= 100)
                 {
                     g.drawString("" + Num, Window.getX(ydelta-3), Window.getX(xdelta*9));
-               
+                    g.drawString("" + Num, Window.getX(ydelta-3), Window.getX(xdelta*8+5));
+                                   g.drawString("" + Num, Window.getX(ydelta-3), Window.getX(xdelta*7+11));
                 }
             }
         }
