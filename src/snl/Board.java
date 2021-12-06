@@ -44,14 +44,10 @@ public class Board {
         {
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)        
             {
-            if (Num < 100)
+            if (Num <= 100)
                 {
-                Num++;
-                }
-            else
-                {
-                    g.drawString("" + Num, Window.getX(zcol*xdelta), Window.getX(zrow*1/9*xdelta));
-                    
+                    g.drawString("" + Num, Window.getX(ydelta-3), Window.getX(xdelta*9));
+               
                 }
             }
         }
