@@ -113,11 +113,11 @@ public class SnL extends JFrame implements Runnable {
         Board.Draw(g);
 
         g.drawImage(ladderImage,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);        
-        g.drawImage(bwSnakeHiss,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
-        g.drawImage(bwSnakeUp,200,200,100,100,this);
-        g.drawImage(bwSnakeRight,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
-        g.drawImage(bwSnakeLeft,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
-        g.drawImage(smolSnake,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+        //g.drawImage(bwSnakeHiss,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+        g.drawImage(bwSnakeUp,340,240,200,240,this);
+        g.drawImage(bwSnakeRight,100,320,150,100,this);
+        //g.drawImage(bwSnakeLeft,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+        //g.drawImage(smolSnake,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
         
         gOld.drawImage(image, 0, 0, null);
     }
