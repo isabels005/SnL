@@ -47,8 +47,15 @@ public class Board {
             if (Num <= 100)
                 {
                     g.drawString("" + Num, Window.getX(ydelta-3), Window.getX(xdelta*9));
-                    g.drawString("" + Num, Window.getX(ydelta-3), Window.getX(xdelta*8+5));
-                                   g.drawString("" + Num, Window.getX(ydelta-3), Window.getX(xdelta*7+11));
+                    g.drawString("" + Num+1, Window.getX(ydelta-8), Window.getX(xdelta*8+5));
+                    g.drawString("" + Num+2, Window.getX(ydelta-8), Window.getX(xdelta*7+11));
+                    g.drawString("" + Num+3, Window.getX(ydelta-8), Window.getX(xdelta*6+11));
+                    g.drawString("" + Num+4, Window.getX(ydelta-8), Window.getX(xdelta*5+11));
+                    g.drawString("" + Num+5, Window.getX(ydelta-8), Window.getX(xdelta*4+11));
+                    g.drawString("" + Num+6, Window.getX(ydelta-8), Window.getX(xdelta*3+11));
+                    g.drawString("" + Num+7, Window.getX(ydelta-8), Window.getX(xdelta*2+11));
+                    g.drawString("" + Num+8, Window.getX(ydelta-8), Window.getX(xdelta*1+11));
+                    g.drawString("" + Num+9, Window.getX(ydelta-8), Window.getX(xdelta*0+11));
                 }
             }
         }
