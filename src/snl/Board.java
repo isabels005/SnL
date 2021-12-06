@@ -2,12 +2,12 @@ package snl;
 import java.awt.*;
 
 public class Board {
-    static Image ladderImage;
     private final static int NUM_ROWS = 10;
-    private final static int NUM_COLUMNS = 10;   
+    private final static int NUM_COLUMNS = 10;      
     static int Num = 1;
+
     private static Piece board[][] = new Piece[NUM_ROWS][NUM_COLUMNS];
-    
+
     public static void Reset() {
 //clear the board.
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
@@ -19,7 +19,6 @@ public class Board {
 //draw grid
         int ydelta = Window.getHeight2()/NUM_ROWS;
         int xdelta = Window.getWidth2()/NUM_COLUMNS;
-        int boxNum = 0;
         
         g.setColor(Color.black);
         for (int zi = 1;zi<NUM_ROWS;zi++)
@@ -40,7 +39,7 @@ public class Board {
                 if (board[zrow][zcol] != null)
                     board[zrow][zcol].draw(g, zrow, zcol,xdelta, ydelta);
             }
-        }     
+        }        
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
         {
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)        
@@ -58,3 +57,5 @@ public class Board {
         }
     }
 }
+
+    
