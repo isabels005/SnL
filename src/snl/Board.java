@@ -46,16 +46,16 @@ public class Board {
             {
             if (Num <= 100)
                 {
-                    g.drawString("" + Num, Window.getX(ydelta-3), Window.getX(xdelta*9));
-                    g.drawString("" + Num+1, Window.getX(ydelta-8), Window.getX(xdelta*8+5));
-                    g.drawString("" + Num+2, Window.getX(ydelta-8), Window.getX(xdelta*7+11));
-                    g.drawString("" + Num+3, Window.getX(ydelta-8), Window.getX(xdelta*6+11));
-                    g.drawString("" + Num+4, Window.getX(ydelta-8), Window.getX(xdelta*5+11));
-                    g.drawString("" + Num+5, Window.getX(ydelta-8), Window.getX(xdelta*4+11));
-                    g.drawString("" + Num+6, Window.getX(ydelta-8), Window.getX(xdelta*3+11));
-                    g.drawString("" + Num+7, Window.getX(ydelta-8), Window.getX(xdelta*2+11));
-                    g.drawString("" + Num+8, Window.getX(ydelta-8), Window.getX(xdelta*1+11));
-                    g.drawString("" + Num+9, Window.getX(ydelta-8), Window.getX(xdelta*0+11));
+                    g.drawString("" + Num, Window.getX(ydelta-3), Window.getX(xdelta*9-1));
+                    g.drawString("" + Num*11, Window.getX(ydelta-8), Window.getX(xdelta*8+5));
+                    g.drawString("" + Num*21, Window.getX(ydelta-8), Window.getX(xdelta*7+11));
+                    g.drawString("" + Num*31, Window.getX(ydelta-8), Window.getX(xdelta*6+17));
+                    g.drawString("" + Num*41, Window.getX(ydelta-8), Window.getX(xdelta*5+23));
+                    g.drawString("" + Num*51, Window.getX(ydelta-8), Window.getX(xdelta*4+29));
+                    g.drawString("" + Num*61, Window.getX(ydelta-8), Window.getX(xdelta*3+35));
+                    g.drawString("" + Num*71, Window.getX(ydelta-8), Window.getX(xdelta*2+41));
+                    g.drawString("" + Num*81, Window.getX(ydelta-8), Window.getX(xdelta*1+47));
+                    g.drawString("" + Num*91, Window.getX(ydelta-8), Window.getX(xdelta*0+53));
                 }
             }
         }
