@@ -54,8 +54,6 @@ public class Board {
                     g.drawString("" + Num*3, Window.getX(ydelta*3), Window.getX(xdelta*9-1));
                     g.drawString("" + Num*4, Window.getX(ydelta*4), Window.getX(xdelta*9-1));
                     g.drawString("" + Num*5, Window.getX(ydelta*5), Window.getX(xdelta*9-1));
-
-                    
                     }
                     
                     g.drawString("" + Num*1+1, Window.getX(ydelta*1+1), Window.getX(xdelta*8+5));
