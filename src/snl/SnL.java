@@ -93,14 +93,17 @@ public class SnL extends JFrame implements Runnable {
         }
 //fill background
         
-        g.setColor(Color.cyan);
-        g.fillRect(0, 0, Window.xsize, Window.ysize);
+//        g.setColor(Color.cyan);
+//        g.fillRect(0, 0, Window.xsize, Window.ysize);
+        
+      //  g.drawImage(vaporwaveBackground,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
 
         int x[] = {Window.getX(0), Window.getX(Window.getWidth2()), Window.getX(Window.getWidth2()), Window.getX(0), Window.getX(0)};
         int y[] = {Window.getY(0), Window.getY(0), Window.getY(Window.getHeight2()), Window.getY(Window.getHeight2()), Window.getY(0)};
 //fill border
-        g.setColor(Color.white);
-        g.fillPolygon(x, y, 4);
+//        g.setColor(Color.white);
+//        g.fillPolygon(x, y, 4);
+       //   g.drawImage(partlyTransparent,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
 // draw border
         g.setColor(Color.red);
         g.drawPolyline(x, y, 5);
@@ -115,11 +118,20 @@ public class SnL extends JFrame implements Runnable {
         g.drawImage(ladderImage,170,150,150,120,this);    
         g.drawImage(ladderImage,470,200,150,75,this);  
         g.drawImage(ladderImage,465,455,150,75,this);        
-        //g.drawImage(bwSnakeHiss,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+        g.drawImage(ladderImage,165,150,150,100,this);        
+        
+        g.drawImage(bwSnakeHiss,450,505,60,60,this);
+        g.drawImage(bwSnakeHiss,450,505,60,60,this);
+        
         g.drawImage(bwSnakeUp,340,240,200,240,this);
+        
         g.drawImage(bwSnakeRight,100,320,150,100,this);
+        
         g.drawImage(bwSnakeLeft,160,470,150,120,this);
-        //g.drawImage(smolSnake,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+        g.drawImage(bwSnakeLeft,510,400,100,90,this);
+        
+        g.drawImage(smolSnake,270,120,60,60,this);
+        
         
         gOld.drawImage(image, 0, 0, null);
     }
