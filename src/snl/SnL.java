@@ -110,7 +110,7 @@ public class SnL extends JFrame implements Runnable {
         g.drawImage(partlyTransparent,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
 
 // draw border
-        g.setColor(Color.red);
+        g.setColor(Color.cyan);
         g.drawPolyline(x, y, 5);
 
         if (animateFirstTime) {
