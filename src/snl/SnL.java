@@ -20,6 +20,9 @@ public class SnL extends JFrame implements Runnable {
     Image bwSnakeLeft;
     Image smolSnake;
     
+    Image vaporwaveBackground;
+    Image partlyTransparent;
+    
     public static void main(String[] args) {
         SnL frame = new SnL();
         frame.setSize(Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT);
@@ -96,7 +99,7 @@ public class SnL extends JFrame implements Runnable {
 //        g.setColor(Color.cyan);
 //        g.fillRect(0, 0, Window.xsize, Window.ysize);
         
-      //  g.drawImage(vaporwaveBackground,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+        g.drawImage(vaporwaveBackground,0,0,700,700,this);
 
         int x[] = {Window.getX(0), Window.getX(Window.getWidth2()), Window.getX(Window.getWidth2()), Window.getX(0), Window.getX(0)};
         int y[] = {Window.getY(0), Window.getY(0), Window.getY(Window.getHeight2()), Window.getY(Window.getHeight2()), Window.getY(0)};
@@ -172,6 +175,7 @@ public class SnL extends JFrame implements Runnable {
             bwSnakeLeft = Toolkit.getDefaultToolkit().getImage("./bwSnakeLeft.png");
             smolSnake = Toolkit.getDefaultToolkit().getImage("./smolSnake.png");
 
+            vaporwaveBackground = Toolkit.getDefaultToolkit().getImage("./vaporwaveBackground.png");
             
             reset();
 
