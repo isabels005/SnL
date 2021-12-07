@@ -106,7 +106,9 @@ public class SnL extends JFrame implements Runnable {
 //fill border
 //        g.setColor(Color.white);
 //        g.fillPolygon(x, y, 4);
-       //   g.drawImage(partlyTransparent,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+          
+        g.drawImage(partlyTransparent,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+
 // draw border
         g.setColor(Color.red);
         g.drawPolyline(x, y, 5);
@@ -176,6 +178,7 @@ public class SnL extends JFrame implements Runnable {
             smolSnake = Toolkit.getDefaultToolkit().getImage("./smolSnake.png");
 
             vaporwaveBackground = Toolkit.getDefaultToolkit().getImage("./vaporwaveBackground.png");
+            partlyTransparent = Toolkit.getDefaultToolkit().getImage("./partlyTransparent.png");
             
             reset();
 
