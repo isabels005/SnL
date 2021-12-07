@@ -93,7 +93,7 @@ public class SnL extends JFrame implements Runnable {
         }
 //fill background
         
-        g.setColor(Color.cyan);
+        g.setColor(Color.ORANGE);
         g.fillRect(0, 0, Window.xsize, Window.ysize);
 
         int x[] = {Window.getX(0), Window.getX(Window.getWidth2()), Window.getX(Window.getWidth2()), Window.getX(0), Window.getX(0)};
@@ -102,7 +102,7 @@ public class SnL extends JFrame implements Runnable {
         g.setColor(Color.white);
         g.fillPolygon(x, y, 4);
 // draw border
-        g.setColor(Color.red);
+        g.setColor(Color.MAGENTA);
         g.drawPolyline(x, y, 5);
 
         if (animateFirstTime) {
@@ -113,11 +113,18 @@ public class SnL extends JFrame implements Runnable {
         Board.Draw(g);
 
         g.drawImage(ladderImage,165,150,150,100,this);        
-        //g.drawImage(bwSnakeHiss,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+        
+        g.drawImage(bwSnakeHiss,450,505,60,60,this);
+        g.drawImage(bwSnakeHiss,450,505,60,60,this);
+        
         g.drawImage(bwSnakeUp,340,240,200,240,this);
+        
         g.drawImage(bwSnakeRight,100,320,150,100,this);
+        
         g.drawImage(bwSnakeLeft,160,470,150,120,this);
-        //g.drawImage(smolSnake,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+        g.drawImage(bwSnakeLeft,510,400,100,90,this);
+        
+        g.drawImage(smolSnake,270,120,60,60,this);
         
         gOld.drawImage(image, 0, 0, null);
     }
