@@ -122,7 +122,8 @@ public class SnL extends JFrame implements Runnable {
         g.drawImage(ladderImage,0,245,130,75,this);   //     
         g.drawImage(ladderImage,480,200,130,110,this);  
         g.drawImage(ladderImage,240,470,130,75,this);  //
-        g.drawImage(ladderImage,60,430,130,160,this);         
+        g.drawImage(ladderImage,60,430,130,160,this);  
+//        g.drawRotImage(ladderImage,60,430,0.0,-1.0,1.0);         
         //g.drawImage(bwSnakeHiss,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
        
 
@@ -146,6 +147,22 @@ public class SnL extends JFrame implements Runnable {
 
         gOld.drawImage(image, 0, 0, null);
     }
+    
+////////////////////////////////////////////////////////////////////////////
+//public void drawRotImage(Image image,int xpos,int ypos,double rot,double xscale,double yscale) {
+//        int width = image.getWidth(thisObj);
+//        int height = image.getHeight(thisObj);
+//        g.translate(xpos,ypos);
+//        g.rotate(rot  * Math.PI/180.0);
+//        g.scale( xscale , yscale );
+//
+//        g.drawImage(image,-width/2,-height/2,
+//        width,height,thisObj);
+//
+//        g.scale( 1.0/xscale,1.0/yscale );
+//        g.rotate(-rot  * Math.PI/180.0);
+//        g.translate(-xpos,-ypos);
+//    }  
 
 ////////////////////////////////////////////////////////////////////////////
 // needed for     implement runnable
