@@ -22,19 +22,19 @@ public void draw(Graphics2D g,int xdelta,int ydelta)
     int num = _num;
     for (int i=0;i<num;i++) 
     {
-        g.drawString("" + num, Window.getX(ydelta), Window.getX(xdelta*9-1));
-        if (num <= 100)
+        if (zrow<=10)
         {
-        zrow++;
         num*=zrow;
         ydelta*=num;
+        zrow++;
         }
-        else if (num <= 100)
+        else if (zcolumn<=10)
         {
-        zcolumn++;
         xdelta*=zcolumn-6;
+        zcolumn++;
         }
-
+    g.drawString("" + num, Window.getX(ydelta), Window.getX(xdelta*9-1));
+    
     }
 }
 }
