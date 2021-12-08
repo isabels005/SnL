@@ -102,7 +102,11 @@ public class SnL extends JFrame implements Runnable {
         g.setColor(Color.white);
         g.fillPolygon(x, y, 4);
 // draw border
+//<<<<<<< HEAD
         g.setColor(Color.MAGENTA);
+//=======
+        g.setColor(Color.cyan);
+//>>>>>>> 7a439042ff7391e8adc7b02d2c402c2bec8183d9
         g.drawPolyline(x, y, 5);
 
         if (animateFirstTime) {

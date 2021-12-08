@@ -19,8 +19,13 @@ public class Board {
 //draw grid
         int ydelta = Window.getHeight2()/NUM_ROWS;
         int xdelta = Window.getWidth2()/NUM_COLUMNS;
+//<<<<<<< HEAD
         int Num = 1;
         g.setColor(Color.MAGENTA);
+//=======
+        
+        g.setColor(Color.cyan);
+//>>>>>>> 7a439042ff7391e8adc7b02d2c402c2bec8183d9
         for (int zi = 1;zi<NUM_ROWS;zi++)
         {
             g.drawLine(Window.getX(0),Window.getY(zi*ydelta),
