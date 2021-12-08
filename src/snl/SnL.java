@@ -19,6 +19,9 @@ public class SnL extends JFrame implements Runnable {
     Image bwSnakeRight;
     Image bwSnakeLeft;
     Image smolSnake;
+
+    Image vaporwaveBackground;
+    Image partlyTransparent;
     
     public static void main(String[] args) {
         SnL frame = new SnL();
@@ -93,20 +96,19 @@ public class SnL extends JFrame implements Runnable {
         }
 //fill background
         
-        g.setColor(Color.ORANGE);
-        g.fillRect(0, 0, Window.xsize, Window.ysize);
+//        g.setColor(Color.ORANGE);
+//        g.fillRect(0, 0, Window.xsize, Window.ysize);
+          g.drawImage(vaporwaveBackground,0,0,700,700,this);
 
         int x[] = {Window.getX(0), Window.getX(Window.getWidth2()), Window.getX(Window.getWidth2()), Window.getX(0), Window.getX(0)};
         int y[] = {Window.getY(0), Window.getY(0), Window.getY(Window.getHeight2()), Window.getY(Window.getHeight2()), Window.getY(0)};
 //fill border
-        g.setColor(Color.white);
-        g.fillPolygon(x, y, 4);
+//        g.setColor(Color.white);
+//        g.fillPolygon(x, y, 4);
+        g.drawImage(partlyTransparent,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
 // draw border
-//<<<<<<< HEAD
-        g.setColor(Color.MAGENTA);
-//=======
+
         g.setColor(Color.cyan);
-//>>>>>>> 7a439042ff7391e8adc7b02d2c402c2bec8183d9
         g.drawPolyline(x, y, 5);
 
         if (animateFirstTime) {
@@ -118,15 +120,18 @@ public class SnL extends JFrame implements Runnable {
 
         g.drawImage(ladderImage,170,150,150,120,this);    
         g.drawImage(ladderImage,470,200,150,75,this);  
+
         g.drawImage(ladderImage,465,455,150,75,this);        
         //g.drawImage(bwSnakeHiss,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
+       
 
         g.drawImage(ladderImage,165,150,150,100,this);        
         
         g.drawImage(bwSnakeHiss,450,505,60,60,this);
-        g.drawImage(bwSnakeHiss,450,505,60,60,this);
+        g.drawImage(bwSnakeHiss,150,235,60,60,this);
         
         g.drawImage(bwSnakeUp,340,240,200,240,this);
+        g.drawImage(bwSnakeUp,10,80,150,200,this);
         
         g.drawImage(bwSnakeRight,100,320,150,100,this);
         
@@ -135,6 +140,11 @@ public class SnL extends JFrame implements Runnable {
         
         g.drawImage(smolSnake,270,120,60,60,this);
         
+        
+
+        g.drawImage(ladderImage,465,455,150,75,this);  
+        
+
         gOld.drawImage(image, 0, 0, null);
     }
 
@@ -174,6 +184,9 @@ public class SnL extends JFrame implements Runnable {
             bwSnakeLeft = Toolkit.getDefaultToolkit().getImage("./bwSnakeLeft.png");
             smolSnake = Toolkit.getDefaultToolkit().getImage("./smolSnake.png");
 
+
+            vaporwaveBackground = Toolkit.getDefaultToolkit().getImage("./vaporwaveBackground.png");
+            partlyTransparent = Toolkit.getDefaultToolkit().getImage("./partlyTransparent.png");
             
             reset();
 
