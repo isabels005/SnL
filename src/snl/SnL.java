@@ -19,7 +19,7 @@ public class SnL extends JFrame implements Runnable {
     Image bwSnakeRight;
     Image bwSnakeLeft;
     Image smolSnake;
-    
+
     Image vaporwaveBackground;
     Image partlyTransparent;
     
@@ -123,16 +123,15 @@ public class SnL extends JFrame implements Runnable {
 
         g.drawImage(ladderImage,465,455,150,75,this);        
         //g.drawImage(bwSnakeHiss,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),this);
-
-
-//        g.drawImage(ladderImage,465,455,150,75,this);        
+       
 
         g.drawImage(ladderImage,165,150,150,100,this);        
         
         g.drawImage(bwSnakeHiss,450,505,60,60,this);
-        g.drawImage(bwSnakeHiss,450,505,60,60,this);
+        g.drawImage(bwSnakeHiss,150,235,60,60,this);
         
         g.drawImage(bwSnakeUp,340,240,200,240,this);
+        g.drawImage(bwSnakeUp,10,80,150,200,this);
         
         g.drawImage(bwSnakeRight,100,320,150,100,this);
         
@@ -140,6 +139,7 @@ public class SnL extends JFrame implements Runnable {
         g.drawImage(bwSnakeLeft,510,400,100,90,this);
         
         g.drawImage(smolSnake,270,120,60,60,this);
+        
         
 
         g.drawImage(ladderImage,465,455,150,75,this);  
@@ -184,8 +184,10 @@ public class SnL extends JFrame implements Runnable {
             bwSnakeLeft = Toolkit.getDefaultToolkit().getImage("./bwSnakeLeft.png");
             smolSnake = Toolkit.getDefaultToolkit().getImage("./smolSnake.png");
 
+
             vaporwaveBackground = Toolkit.getDefaultToolkit().getImage("./vaporwaveBackground.png");
             partlyTransparent = Toolkit.getDefaultToolkit().getImage("./partlyTransparent.png");
+            
             reset();
 
         }
