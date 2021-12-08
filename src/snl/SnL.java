@@ -149,20 +149,20 @@ public class SnL extends JFrame implements Runnable {
     }
     
 ////////////////////////////////////////////////////////////////////////////
-public void drawRotImage(Image image,int xpos,int ypos,double rot,double xscale,double yscale) {
-        int width = image.getWidth(thisObj);
-        int height = image.getHeight(thisObj);
-        g.translate(xpos,ypos);
-        g.rotate(rot  * Math.PI/180.0);
-        g.scale( xscale , yscale );
-
-        g.drawImage(image,-width/2,-height/2,
-        width,height,thisObj);
-
-        g.scale( 1.0/xscale,1.0/yscale );
-        g.rotate(-rot  * Math.PI/180.0);
-        g.translate(-xpos,-ypos);
-    }  
+//public void drawRotImage(Image image,int xpos,int ypos,double rot,double xscale,double yscale) {
+//        int width = image.getWidth(thisObj);
+//        int height = image.getHeight(thisObj);
+//        g.translate(xpos,ypos);
+//        g.rotate(rot  * Math.PI/180.0);
+//        g.scale( xscale , yscale );
+//
+//        g.drawImage(image,-width/2,-height/2,
+//        width,height,thisObj);
+//
+//        g.scale( 1.0/xscale,1.0/yscale );
+//        g.rotate(-rot  * Math.PI/180.0);
+//        g.translate(-xpos,-ypos);
+//    }  
 
 ////////////////////////////////////////////////////////////////////////////
 // needed for     implement runnable
