@@ -16,11 +16,12 @@ public class Player {
     public static Player GetCurrentTurn() {
         return (currentTurn);
     }
-//    public static void MakeTie()
-//    {
-//        players[0].winner = true;
-//        players[1].winner = true;
-//    }
+    public static void MakeTie()
+    {
+        players[0].winner = true;
+        players[1].winner = true;
+    }
+    
     public static Player GetPlayer1()
     {
         return players[0];

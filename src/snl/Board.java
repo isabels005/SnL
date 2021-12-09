@@ -13,19 +13,20 @@ public class Board {
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)
                 board[zrow][zcol] = null;
+        
+        Player currentPlayer = Player.GetCurrentTurn();
+        
+        board[9][0] = new OvalPiece(Color.PINK);
     }
+    
+
     
     public static void Draw(Graphics2D g) {
 //draw grid
         int ydelta = Window.getHeight2()/NUM_ROWS;
         int xdelta = Window.getWidth2()/NUM_COLUMNS;
-//<<<<<<< HEAD
         int num = 1;
-        g.setColor(Color.MAGENTA);
-//=======
-        
         g.setColor(Color.cyan);
-//>>>>>>> 7a439042ff7391e8adc7b02d2c402c2bec8183d9
         for (int zi = 1;zi<NUM_ROWS;zi++)
         {
             g.drawLine(Window.getX(0),Window.getY(zi*ydelta),
@@ -46,6 +47,7 @@ public class Board {
                     
             }
         }    
+        
         number = new Number(xdelta,ydelta,num);
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
         {
