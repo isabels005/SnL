@@ -42,12 +42,20 @@ public class Player {
     public static Player GetOtherTurn() {
         if (currentTurn == players[0])
             return (players[1]);
+        if (currentTurn == players[1])
+            return (players[2]);
+        if (currentTurn == players[2])
+            return (players[3]);
         else
             return (players[0]);
     }    
     public static void SwitchTurn() {
         if (currentTurn == players[0])
             currentTurn = players[1];
+        else if (currentTurn == players[1])
+            currentTurn = players[2];
+        else if (currentTurn == players[2])
+            currentTurn = players[3];
         else
             currentTurn = players[0];
     }
