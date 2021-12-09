@@ -127,6 +127,8 @@ public class SnL extends JFrame implements Runnable {
 
         Board.Draw(g);
 
+        
+        
         g.drawImage(ladderImage,180,145,130,110,this); 
         g.drawImage(ladderImage,0,245,130,75,this);   //     
         g.drawImage(ladderImage,480,200,130,110,this);  
@@ -192,6 +194,7 @@ public void drawRotImage(Graphics2D g,Image image,int xpos,int ypos,double rot,d
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
         Board.Reset();
+        Player.Reset();
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {

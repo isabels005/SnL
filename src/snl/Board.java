@@ -15,11 +15,9 @@ public class Board {
                 board[zrow][zcol] = null;
         
         Player currentPlayer = Player.GetCurrentTurn();
-        
         board[9][0] = new OvalPiece(Color.PINK);
     }
     
-
     
     public static void Draw(Graphics2D g) {
 //draw grid

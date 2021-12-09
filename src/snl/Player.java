@@ -1,5 +1,6 @@
 package snl;
 import java.awt.Color;
+import java.awt.Graphics2D;
 public class Player {
     private static Player currentTurn;
     private static Player players[] = new Player[2];
@@ -10,6 +11,7 @@ public class Player {
         int number = 0;
         PlayerSelection(number);
     }
+    
     public static Player GetCurrentTurn() {
         return (currentTurn);
     }
@@ -35,6 +37,7 @@ public class Player {
     {
         return players[3];
     }    
+    
     
     public static int PlayerSelection(int numberPlayers) {
     int numPlayers = numberPlayers;
