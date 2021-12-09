@@ -7,11 +7,8 @@ public class Player {
     private boolean winner;
     public static void Reset()
     {
-        players[0] = new Player(Color.red);
-        players[1] = new Player(Color.blue);
-        players[2] = new Player(Color.yellow);
-        players[3] = new Player(Color.green);
-        currentTurn = players[0];
+        int number = 0;
+        PlayerSelection(number);
     }
     public static Player GetCurrentTurn() {
         return (currentTurn);
@@ -38,6 +35,33 @@ public class Player {
     {
         return players[3];
     }    
+    
+    public static int PlayerSelection(int numberPlayers) {
+    int numPlayers = numberPlayers;
+    
+    if (numPlayers == 2)
+    {
+        players[0] = new Player(Color.red);
+        players[1] = new Player(Color.blue);
+        currentTurn = players[0];
+    }
+    if (numPlayers == 3)
+    {
+        players[0] = new Player(Color.red);
+        players[1] = new Player(Color.blue);
+        players[2] = new Player(Color.yellow);
+        currentTurn = players[0];
+    }
+    if (numPlayers == 4)
+    {
+        players[0] = new Player(Color.red);
+        players[1] = new Player(Color.blue);
+        players[2] = new Player(Color.yellow);
+        players[3] = new Player(Color.green);
+        currentTurn = players[0];
+    }
+    return(numPlayers);
+}
     
     public static Player GetOtherTurn() {
         if (currentTurn == players[0])
