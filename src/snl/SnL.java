@@ -20,8 +20,17 @@ public class SnL extends JFrame implements Runnable {
     Image bwSnakeLeft;
     Image smolSnake;
 
+    //background images
     Image vaporwaveBackground;
     Image partlyTransparent;
+    
+    //dice images
+    Image dice1;
+    Image dice2;
+    Image dice3;
+    Image dice4;
+    Image dice5;
+    Image dice6;
     
     public static void main(String[] args) {
         SnL frame = new SnL();
@@ -142,7 +151,7 @@ public class SnL extends JFrame implements Runnable {
         g.drawImage(smolSnake,270,120,60,60,this);
         g.drawImage(smolSnake,330,388,60,60,this);
         
-
+        g.drawImage(dice1,580,30,40,40,this);
         
 
         gOld.drawImage(image, 0, 0, null);
@@ -203,6 +212,13 @@ public class SnL extends JFrame implements Runnable {
 
             vaporwaveBackground = Toolkit.getDefaultToolkit().getImage("./vaporwaveBackground.png");
             partlyTransparent = Toolkit.getDefaultToolkit().getImage("./partlyTransparent.png");
+            
+            dice1 = Toolkit.getDefaultToolkit().getImage("./dice1.png");
+            dice2 = Toolkit.getDefaultToolkit().getImage("./dice2.png");
+            dice3 = Toolkit.getDefaultToolkit().getImage("./dice3.png");
+            dice4 = Toolkit.getDefaultToolkit().getImage("./dice4.png");
+            dice5 = Toolkit.getDefaultToolkit().getImage("./dice5.png");
+            dice6 = Toolkit.getDefaultToolkit().getImage("./dice6.png");
             
             reset();
 
