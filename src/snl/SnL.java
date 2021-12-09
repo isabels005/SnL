@@ -8,6 +8,7 @@ import javax.swing.*;
 
 public class SnL extends JFrame implements Runnable {
     boolean animateFirstTime = true;
+    boolean choosePlayerNum = true;
     Image image;
     Graphics2D g;
     
