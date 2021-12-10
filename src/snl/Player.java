@@ -66,6 +66,7 @@ public class Player {
     return(numPlayers);
 }
     
+    
     public static Player GetOtherTurn() {
         if (currentTurn == players[0])
             return (players[1]);

@@ -13,11 +13,21 @@ public class Board {
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)
                 board[zrow][zcol] = null;
-        
+    }
+    
+    public static void AddPlayer() {
         Player currentPlayer = Player.GetCurrentTurn();
         board[9][0] = new OvalPiece(Color.PINK);
     }
     
+    public static int DiceMove() {
+        int spaceMoved = Dice.DiceRollNumber();
+        return(spaceMoved);
+    }
+    
+//    public static void DiceRoll() {
+//        
+//    }
     
     public static void Draw(Graphics2D g) {
 //draw grid
