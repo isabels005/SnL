@@ -14,8 +14,7 @@ public void draw(Graphics2D g,int xdelta,int ydelta)
 {
     g.setColor(Color.green);
     int num = _num;
-
-        g.drawString("" + num, Window.getX(ydelta), Window.getX(xdelta*9-1));
+    g.drawString("" + num, Window.getX(ydelta), Window.getX(xdelta*9-1));
         
     }
 }
