@@ -51,7 +51,9 @@ public class Board {
         {
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)        
             {
+                
                 number.draw(g,xdelta,ydelta);
+                
 //            if (num <= 100)
 //                {
 //                    if(NUM_ROWS==10)
@@ -68,7 +70,7 @@ public class Board {
 //                    g.drawString("" + num*10, Window.getX(ydelta*10+45), Window.getX(xdelta*9-1));
 //                    }
 //                    
-//                    g.drawString("" + num*1+1, Window.getX(ydelta-8), Window.getX(xdelta*8+5));
+//                    g.drawString("" + num*1+1, Window.getX(ydelta*1-8), Window.getX(xdelta*8+5));
 //                    g.drawString("" + num*2+1, Window.getX(ydelta-8), Window.getX(xdelta*7+11));
 //                    g.drawString("" + num*3+1, Window.getX(ydelta-8), Window.getX(xdelta*6+17));
 //                    g.drawString("" + num*4+1, Window.getX(ydelta-8), Window.getX(xdelta*5+23));
