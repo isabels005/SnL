@@ -13,11 +13,12 @@ public class Board {
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)
                 board[zrow][zcol] = null;
+        AddPlayer();
     }
     
     public static void AddPlayer() {
         Player currentPlayer = Player.GetCurrentTurn();
-        board[9][0] = new OvalPiece(Color.PINK);
+        board[9][0] = new OvalPiece(Color.ORANGE);
     }
     
     
@@ -50,7 +51,24 @@ public class Board {
             }
         }    
         
+        if(Player.PlayerDisplay() == true) {
+        g.setColor(Color.orange);
+        StringCentered(g,100,554,"Number of Players: "+" "+ Player.NumPlayers(),"Arial",12);
+        }
+        
     }
+    
+    public static void StringCentered(Graphics2D g,int xpos,int ypos,String text,String font,int size)
+    {
+        g.setFont (new Font (font,Font.PLAIN, size)); 
+        int width = g.getFontMetrics().stringWidth(text);
+        int height = g.getFontMetrics().getHeight();
+        xpos = xpos - width/2;
+        ypos = ypos - height/4;
+        xpos = Window.getX(xpos);
+        ypos = Window.getYNormal(ypos);
+        g.drawString(text, xpos, ypos);           
+    }   
 }
 
     
