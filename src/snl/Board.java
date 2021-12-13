@@ -20,14 +20,7 @@ public class Board {
         board[9][0] = new OvalPiece(Color.PINK);
     }
     
-    public static int DiceMove() {
-        int spaceMoved = Dice.DiceRollNumber();
-        return(spaceMoved);
-    }
     
-//    public static void DiceRoll() {
-//        
-//    }
     
     public static void Draw(Graphics2D g) {
 //draw grid
