@@ -221,10 +221,10 @@ public void drawRotImage(Graphics2D g,Image image,int xpos,int ypos,double rot,d
             }
             ladderImage = Toolkit.getDefaultToolkit().getImage("./ladder.png");  
 
-            bwSnakeHiss = Toolkit.getDefaultToolkit().getImage("./bwSnakeHiss.png");
-            bwSnakeUp = Toolkit.getDefaultToolkit().getImage("./bwSnakeUp.png");
-            bwSnakeRight = Toolkit.getDefaultToolkit().getImage("./bwSnakeRight.png");
-            bwSnakeLeft = Toolkit.getDefaultToolkit().getImage("./bwSnakeLeft.png");
+            bwSnakeHiss = Toolkit.getDefaultToolkit().getImage("./bwSnakeHiss2.png");
+            bwSnakeUp = Toolkit.getDefaultToolkit().getImage("./bwSnakeUp2.png");
+            bwSnakeRight = Toolkit.getDefaultToolkit().getImage("./bwSnakeRight2.png");
+            bwSnakeLeft = Toolkit.getDefaultToolkit().getImage("./bwSnakeLeft2.png");
             smolSnake = Toolkit.getDefaultToolkit().getImage("./smolSnake.png");
 
 
