@@ -3,14 +3,17 @@ import java.awt.*;
 
 public class Number extends Piece
 {
-    private int num;
+    int num;
     
-Number(Color _color)
+Number(Color _color,int row,int column)
     {
         super(_color);
         num = 1;
-    }    
-    
+        if(row>=1)
+        {
+        num=01;
+        }
+    } 
 public void draw(Graphics2D g,int row,int column,int xdelta,int ydelta) 
 {
     g.setColor(getColor());

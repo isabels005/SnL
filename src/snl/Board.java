@@ -47,10 +47,19 @@ public class Board {
             {
                 if (board[zrow][zcol] != null)
                     board[zrow][zcol].draw(g, zrow, zcol,xdelta, ydelta);
-           board[zrow][zcol] = new Number(Color.GREEN);
             }
         }    
-        
+        for (int zrow=0;zrow<NUM_ROWS;zrow++)
+        {
+            for (int zcol=0;zcol<NUM_COLUMNS;zcol++)        
+            {
+                if (board[zrow][zcol] != null)
+                {
+                    board[zrow][zcol] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
+                    
+                }
+            }
+        }  
         if(Player.PlayerDisplay() == true) {
         g.setColor(Color.orange);
         StringCentered(g,60,554,"Number of Players: "+" "+ Player.NumPlayers(),"Arial",12);
