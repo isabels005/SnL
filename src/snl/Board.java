@@ -12,12 +12,18 @@ public class Board {
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)
                 board[zrow][zcol] = null;
-        AddPlayer();
+        DisplayPlayer();
+    }
+    
+    public static void DisplayPlayer()
+    {
+        Player currentPlayer = Player.GetCurrentTurn();
+        board[9][0] = new OvalPiece(Color.orange);
+        //board[9][0] = new OvalPiece(Player.GetCurrentTurn().getColor());
     }
     
     public static void AddPlayer() {
-        Player currentPlayer = Player.GetCurrentTurn();
-        board[9][0] = new OvalPiece(Color.ORANGE);
+        Player.NumPlayers();
     }
     public static void Draw(Graphics2D g) {
 //draw grid
@@ -47,9 +53,31 @@ public class Board {
         
         if(Player.PlayerDisplay() == true) {
         g.setColor(Color.orange);
-        StringCentered(g,100,554,"Number of Players: "+" "+ Player.NumPlayers(),"Arial",12);
+        StringCentered(g,60,554,"Number of Players: "+" "+ Player.NumPlayers(),"Arial",12);
         }
         
+        if(Dice.NumDisplay() == true) {
+        g.setColor(Color.orange);
+        StringCentered(g,490,554,"Dice Roll Number: "+" "+ Dice.number,"Arial",12);
+        }
+        
+        
+        //needs fixes
+//        if (Player.GetCurrentTurn().isWinner() && Player.GetOtherTurn().isWinner())
+//        {
+//            g.setColor(Color.blue);
+//            StringCentered(g,250,554,"We Have World Peace","Arial",30);
+//        }
+//        else if (Player.GetPlayer1().isWinner())
+//        {
+//            g.setColor(Player.GetPlayer1().getColor());
+//            StringCentered(g,250,554,"Player 1 is the Winner","Arial",30);
+//        }
+//        else if (Player.GetPlayer2().isWinner())
+//        {
+//            g.setColor(Player.GetPlayer2().getColor());
+//            StringCentered(g,250,554,"Player 2 is the Winner","Arial",30);
+//         }      
     }
     
     public static void StringCentered(Graphics2D g,int xpos,int ypos,String text,String font,int size)
