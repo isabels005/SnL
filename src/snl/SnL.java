@@ -126,7 +126,7 @@ public class SnL extends JFrame implements Runnable {
             return;
         }
 
-        Board.Draw(g);
+       // Board.Draw(g);
 
         
         
@@ -155,7 +155,7 @@ public class SnL extends JFrame implements Runnable {
         g.drawImage(smolSnake,270,120,60,60,this);
         g.drawImage(smolSnake,330,388,60,60,this);
         
-        
+        Board.Draw(g);
         
         if (Dice.number == 1)
             g.drawImage(dice1,580,30,40,40,this); 
