@@ -19,27 +19,6 @@ public class Board {
         Player currentPlayer = Player.GetCurrentTurn();
         board[9][0] = new OvalPiece(Color.ORANGE);
     }
-    public static void Number(int xpixel,int ypixel) 
-    {
-        int ydelta = Window.getHeight2()/NUM_ROWS;
-        int xdelta = Window.getWidth2()/NUM_COLUMNS;
-        int xpixelOffset = xpixel - Window.getX(0);
-        int ypixelOffset = ypixel - Window.getY(0);
-        if (xpixelOffset < 0  ||  xpixelOffset > Window.getWidth2())
-            return;
-        if (ypixelOffset < 0  ||  ypixelOffset > Window.getHeight2())
-            return;
-        int column = xpixelOffset/xdelta;
-        int row = NUM_ROWS-1;
-        while (row > 0 && board[row][column] != null)
-        {
-            row--;   //Move up to the next row.
-        }
-        if (row < 0 || board[row][column] != null)  //Don't add a piece if the column is full.
-            return;        
-        
-        board[row][column] = new Number(Color.GREEN);
-    }
     public static void Draw(Graphics2D g) {
 //draw grid
         int ydelta = Window.getHeight2()/NUM_ROWS;
@@ -62,6 +41,7 @@ public class Board {
             {
                 if (board[zrow][zcol] != null)
                     board[zrow][zcol].draw(g, zrow, zcol,xdelta, ydelta);
+           board[zrow][zcol] = new Number(Color.GREEN);
             }
         }    
         
