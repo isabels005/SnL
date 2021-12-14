@@ -15,8 +15,8 @@ public void draw(Graphics2D g,int row,int column,int xdelta,int ydelta)
 {
     g.setColor(getColor());
     g.setFont (new Font ("Arial",Font.PLAIN,30));
-    g.drawString(""+num,Window.getX(column*xdelta)+30, Window.getY(row*ydelta)+45);
-//
+    g.drawString(""+num,Window.getX(column*xdelta)+22, Window.getY(row*ydelta)+42);
+
 //    g.drawString("" + num, Window.getX(ydelta), Window.getX(xdelta*9-1));
 //        g.drawString("" + num*2, Window.getX(ydelta*2+5), Window.getX(xdelta*9-1));
 //                    g.drawString("" + num*3, Window.getX(ydelta*3+10), Window.getX(xdelta*9-1));
