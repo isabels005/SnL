@@ -17,4 +17,9 @@ public class Dice {
         return(number);
     }
     
+    public static boolean NumDisplay()
+    {
+        return true;
+    }
+    
 }
