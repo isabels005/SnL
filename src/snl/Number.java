@@ -4,8 +4,8 @@ import java.awt.*;
 public class Number extends Piece
 {
     private static int num = 1;
-    
-Number(Color _color)
+
+Number(Color _color,int row,int column)
     {
         super(_color);
         num = numberAdd();
@@ -23,6 +23,7 @@ Number(Color _color)
         }
         return value;
     }    
+     
 
 public void draw(Graphics2D g,int row,int column,int xdelta,int ydelta) 
 {
