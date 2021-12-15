@@ -9,6 +9,7 @@ import javax.swing.*;
 public class SnL extends JFrame implements Runnable {
     boolean animateFirstTime = true;
     boolean chooseNumPlayers = true;
+    static boolean diceRoll = false;    
     Image image;
     Graphics2D g;
     
