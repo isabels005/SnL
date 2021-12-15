@@ -8,7 +8,7 @@ import javax.swing.*;
 
 public class SnL extends JFrame implements Runnable {
     boolean animateFirstTime = true;
-    boolean choosePlayerNum = true;
+    boolean chooseNumPlayers = true;
     Image image;
     Graphics2D g;
     
@@ -125,6 +125,13 @@ public class SnL extends JFrame implements Runnable {
             gOld.drawImage(image, 0, 0, null);
             return;
         }
+        
+        if (chooseNumPlayers) {
+             g.setColor(Color.black);
+            StringCentered(g,250,554,"Welcome! Type in your amount of players (1,2,3,4).","Arial",30);
+            
+            chooseNumPlayers = false;
+        }
 
         Board.Draw(g);
 
@@ -160,20 +167,17 @@ public class SnL extends JFrame implements Runnable {
     }
     
 ////////////////////////////////////////////////////////////////////////////
-public void drawRotImage(Graphics2D g,Image image,int xpos,int ypos,double rot,double xscale,double yscale,SnL thisObj) {
-        int width = image.getWidth(thisObj);
-        int height = image.getHeight(thisObj);
-        g.translate(xpos,ypos);
-        g.rotate(rot  * Math.PI/180.0);
-        g.scale( xscale , yscale );
-
-        g.drawImage(image,-width/2,-height/2,
-        width,height,thisObj);
-
-        g.scale( 1.0/xscale,1.0/yscale );
-        g.rotate(-rot  * Math.PI/180.0);
-        g.translate(-xpos,-ypos);
-    }  
+public static void StringCentered(Graphics2D g,int xpos,int ypos,String text,String font,int size)
+    {
+        g.setFont (new Font (font,Font.PLAIN, size)); 
+        int width = g.getFontMetrics().stringWidth(text);
+        int height = g.getFontMetrics().getHeight();
+        xpos = xpos - width/2;
+        ypos = ypos - height/4;
+        xpos = Window.getX(xpos);
+        ypos = Window.getYNormal(ypos);
+        g.drawString(text, xpos, ypos);           
+    }   
 
 ////////////////////////////////////////////////////////////////////////////
 // needed for     implement runnable
