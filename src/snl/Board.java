@@ -55,8 +55,21 @@ public class Board {
             {
                 if (board[zrow][zcol] != null)
                 {
-                    board[zrow][zcol] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
                     
+                    if(zrow == 9 && zcol <= 9)
+                    {
+                    board[zrow][0] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
+                    }
+                    else if (zrow == 8 && zcol <= 18)
+                    {
+                    
+                    }
+//                    board[zrow][1] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
+//                    board[zrow][2] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
+//                    board[zrow][3] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
+//                    board[zrow][4] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
+//                    board[zrow][5] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
+
                 }
             }
         }  
