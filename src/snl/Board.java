@@ -17,13 +17,13 @@ public class Board {
     
     public static void DisplayPlayer()
     {
-        Player currentPlayer = Player.GetCurrentTurn();
+       // Player currentPlayer = Player.GetCurrentTurn();
         board[9][0] = new OvalPiece(Color.orange);
-        //board[9][0] = new OvalPiece(Player.GetCurrentTurn().getColor());
+       //board[9][0] = new OvalPiece(Player.GetCurrentTurn().getColor());
     }
     
     public static void AddPlayer() {
-        Player.NumPlayers();
+//        Player.NumPlayers();
     }
     public static void Draw(Graphics2D g) {
 //draw grid
@@ -79,6 +79,16 @@ public class Board {
 //            StringCentered(g,250,554,"Player 2 is the Winner","Arial",30);
 //         }      
     }
+    
+    public static int getNumColumns()
+        {
+            return(NUM_COLUMNS);
+        }
+    
+    public static int getNumRows()
+        {
+            return(NUM_ROWS);
+        }
     
     public static void StringCentered(Graphics2D g,int xpos,int ypos,String text,String font,int size)
     {
