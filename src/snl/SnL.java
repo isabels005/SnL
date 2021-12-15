@@ -45,11 +45,11 @@ public class SnL extends JFrame implements Runnable {
             public void mousePressed(MouseEvent e) {
 
                 if (e.BUTTON1 == e.getButton() ) {
-
+                    Dice.Roll();
                 }
 
                 if (e.BUTTON3 == e.getButton()) {
-
+                    Board.AddPlayer();
                 }
                 repaint();
             }
@@ -133,8 +133,10 @@ public class SnL extends JFrame implements Runnable {
             chooseNumPlayers = false;
         }
 
-        Board.Draw(g);
+       // Board.Draw(g);
 
+        
+        
         g.drawImage(ladderImage,180,145,130,110,this); 
         g.drawImage(ladderImage,0,245,130,75,this);   //     
         g.drawImage(ladderImage,480,200,130,110,this);  
@@ -160,9 +162,22 @@ public class SnL extends JFrame implements Runnable {
         g.drawImage(smolSnake,270,120,60,60,this);
         g.drawImage(smolSnake,330,388,60,60,this);
         
-        g.drawImage(dice1,580,30,40,40,this);
+        Board.Draw(g);
         
-
+        if (Dice.number == 1)
+            g.drawImage(dice1,580,30,40,40,this); 
+        if(Dice.number == 2)
+            g.drawImage(dice2,580,30,40,40,this); 
+        if(Dice.number == 3)
+            g.drawImage(dice3,580,30,40,40,this); 
+        if(Dice.number == 4)
+            g.drawImage(dice4,580,30,40,40,this); 
+        if(Dice.number == 5)
+            g.drawImage(dice5,580,30,40,40,this); 
+        if(Dice.number == 6)
+            g.drawImage(dice6,580,30,40,40,this); 
+        
+        
         gOld.drawImage(image, 0, 0, null);
     }
     
@@ -197,6 +212,7 @@ public static void StringCentered(Graphics2D g,int xpos,int ypos,String text,Str
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
         Board.Reset();
+        Player.Reset();
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {
@@ -209,10 +225,10 @@ public static void StringCentered(Graphics2D g,int xpos,int ypos,String text,Str
             }
             ladderImage = Toolkit.getDefaultToolkit().getImage("./ladder.png");  
 
-            bwSnakeHiss = Toolkit.getDefaultToolkit().getImage("./bwSnakeHiss.png");
-            bwSnakeUp = Toolkit.getDefaultToolkit().getImage("./bwSnakeUp.png");
-            bwSnakeRight = Toolkit.getDefaultToolkit().getImage("./bwSnakeRight.png");
-            bwSnakeLeft = Toolkit.getDefaultToolkit().getImage("./bwSnakeLeft.png");
+            bwSnakeHiss = Toolkit.getDefaultToolkit().getImage("./bwSnakeHiss2.png");
+            bwSnakeUp = Toolkit.getDefaultToolkit().getImage("./bwSnakeUp2.png");
+            bwSnakeRight = Toolkit.getDefaultToolkit().getImage("./bwSnakeRight2.png");
+            bwSnakeLeft = Toolkit.getDefaultToolkit().getImage("./bwSnakeLeft2.png");
             smolSnake = Toolkit.getDefaultToolkit().getImage("./smolSnake.png");
 
 

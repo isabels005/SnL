@@ -3,8 +3,7 @@ import java.awt.*;
 
 public class Board {
     private final static int NUM_ROWS = 10;
-    private final static int NUM_COLUMNS = 10;      
-    private static Number number;
+    private final static int NUM_COLUMNS = 10;
 
     private static Piece board[][] = new Piece[NUM_ROWS][NUM_COLUMNS];
 
@@ -13,19 +12,23 @@ public class Board {
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)
                 board[zrow][zcol] = null;
-        
-        Player currentPlayer = Player.GetCurrentTurn();
-        
-        board[9][0] = new OvalPiece(Color.PINK);
+        DisplayPlayer();
     }
     
-
+    public static void DisplayPlayer()
+    {
+        Player currentPlayer = Player.GetCurrentTurn();
+        board[9][0] = new OvalPiece(Color.orange);
+        //board[9][0] = new OvalPiece(Player.GetCurrentTurn().getColor());
+    }
     
+    public static void AddPlayer() {
+        Player.NumPlayers();
+    }
     public static void Draw(Graphics2D g) {
 //draw grid
         int ydelta = Window.getHeight2()/NUM_ROWS;
         int xdelta = Window.getWidth2()/NUM_COLUMNS;
-        int num = 1;
         g.setColor(Color.cyan);
         for (int zi = 1;zi<NUM_ROWS;zi++)
         {
@@ -44,45 +47,57 @@ public class Board {
             {
                 if (board[zrow][zcol] != null)
                     board[zrow][zcol].draw(g, zrow, zcol,xdelta, ydelta);
-                    
             }
         }    
-        
-        number = new Number(xdelta,ydelta,num);
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
         {
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)        
             {
-                number.draw(g,xdelta,ydelta);
-//            if (num <= 100)
-//                {
-//                    if(NUM_ROWS==10)
-//                    {
-//                    g.drawString("" + num, Window.getX(ydelta), Window.getX(xdelta*9-1));
-//                    g.drawString("" + num*2, Window.getX(ydelta*2+5), Window.getX(xdelta*9-1));
-//                    g.drawString("" + num*3, Window.getX(ydelta*3+10), Window.getX(xdelta*9-1));
-//                    g.drawString("" + num*4, Window.getX(ydelta*4+15), Window.getX(xdelta*9-1));
-//                    g.drawString("" + num*5, Window.getX(ydelta*5+20), Window.getX(xdelta*9-1));
-//                    g.drawString("" + num*6, Window.getX(ydelta*6+25), Window.getX(xdelta*9-1));
-//                    g.drawString("" + num*7, Window.getX(ydelta*7+30), Window.getX(xdelta*9-1));
-//                    g.drawString("" + num*8, Window.getX(ydelta*8+35), Window.getX(xdelta*9-1));
-//                    g.drawString("" + num*9, Window.getX(ydelta*9+40), Window.getX(xdelta*9-1));
-//                    g.drawString("" + num*10, Window.getX(ydelta*10+45), Window.getX(xdelta*9-1));
-//                    }
-//                    
-//                    g.drawString("" + num*1+1, Window.getX(ydelta-8), Window.getX(xdelta*8+5));
-//                    g.drawString("" + num*2+1, Window.getX(ydelta-8), Window.getX(xdelta*7+11));
-//                    g.drawString("" + num*3+1, Window.getX(ydelta-8), Window.getX(xdelta*6+17));
-//                    g.drawString("" + num*4+1, Window.getX(ydelta-8), Window.getX(xdelta*5+23));
-//                    g.drawString("" + num*5+1, Window.getX(ydelta-8), Window.getX(xdelta*4+29));
-//                    g.drawString("" + num*6+1, Window.getX(ydelta-8), Window.getX(xdelta*3+35));
-//                    g.drawString("" + num*7+1, Window.getX(ydelta-8), Window.getX(xdelta*2+41));
-//                    g.drawString("" + num*8+1, Window.getX(ydelta-8), Window.getX(xdelta*1+47));
-//                    g.drawString("" + num*9+1, Window.getX(ydelta-8), Window.getX(xdelta*0+53));
-//                }
+                if (board[zrow][zcol] != null)
+                {
+                    board[zrow][zcol] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
+                    
+                }
             }
+        }  
+        if(Player.PlayerDisplay() == true) {
+        g.setColor(Color.orange);
+        StringCentered(g,60,554,"Number of Players: "+" "+ Player.NumPlayers(),"Arial",12);
         }
+        
+        if(Dice.NumDisplay() == true) {
+        g.setColor(Color.orange);
+        StringCentered(g,490,554,"Dice Roll Number: "+" "+ Dice.number,"Arial",12);
+        }
+        
+        
+        //needs fixes
+//        if (Player.GetCurrentTurn().isWinner() && Player.GetOtherTurn().isWinner())
+//        {
+//            g.setColor(Color.blue);
+//            StringCentered(g,250,554,"We Have World Peace","Arial",30);
+//        }
+//        else if (Player.GetPlayer1().isWinner())
+//        {
+//            g.setColor(Player.GetPlayer1().getColor());
+//            StringCentered(g,250,554,"Player 1 is the Winner","Arial",30);
+//        }
+//        else if (Player.GetPlayer2().isWinner())
+//        {
+//            g.setColor(Player.GetPlayer2().getColor());
+//            StringCentered(g,250,554,"Player 2 is the Winner","Arial",30);
+//         }      
     }
-}
-
     
+    public static void StringCentered(Graphics2D g,int xpos,int ypos,String text,String font,int size)
+    {
+        g.setFont (new Font (font,Font.PLAIN, size)); 
+        int width = g.getFontMetrics().stringWidth(text);
+        int height = g.getFontMetrics().getHeight();
+        xpos = xpos - width/2;
+        ypos = ypos - height/4;
+        xpos = Window.getX(xpos);
+        ypos = Window.getYNormal(ypos);
+        g.drawString(text, xpos, ypos);           
+    }   
+}
