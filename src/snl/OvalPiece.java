@@ -12,7 +12,7 @@ public class OvalPiece extends Piece {
     {
         g.setColor(getColor());
         g.fillOval(Window.getX(column*xdelta), Window.getY(row*ydelta), 
-        xdelta, ydelta);        
+        xdelta, ydelta); 
     }
     
 }

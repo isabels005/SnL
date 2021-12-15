@@ -134,8 +134,6 @@ public class SnL extends JFrame implements Runnable {
             chooseNumPlayers = false;
         }
 
-        //Board.Draw(g);
-
         
         
         g.drawImage(ladderImage,180,145,130,110,this); 

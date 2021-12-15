@@ -12,7 +12,6 @@ public class Board {
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)
                 board[zrow][zcol] = null;
-        DisplayPlayer();
     }
     
     public static void DisplayPlayer()
@@ -23,7 +22,7 @@ public class Board {
     }
     
     public static void AddPlayer() {
-//        Player.NumPlayers();
+        Player.NumPlayers();
     }
     public static void Draw(Graphics2D g) {
 //draw grid
@@ -72,7 +71,10 @@ public class Board {
 
                 }
             }
-        }  
+        }         
+        
+        DisplayPlayer();
+        
         if(Player.PlayerDisplay() == true) {
         g.setColor(Color.orange);
         StringCentered(g,60,554,"Number of Players: "+" "+ Player.NumPlayers(),"Arial",12);

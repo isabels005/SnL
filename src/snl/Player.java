@@ -1,16 +1,20 @@
 package snl;
 import java.awt.Color;
-import java.awt.Font;
+//import java.awt.Font;
 import java.awt.Graphics2D;
 public class Player {
     private static Player currentTurn;
-    private static Player players[] = new Player[2];
+    private static Player players[] = new Player[4];
     private Color color;    
     private boolean winner;
+    
+    private static int Players;
+    private static int CurrentPlayers = NumPlayers();
+    
     public static void Reset()
     {
-        NumPlayers();
-        int number = 0;
+        Players = 2;
+        int number = CurrentPlayers; //CurrentPlayers;
         PlayerSelection(number);
     }
     
@@ -47,8 +51,10 @@ public class Player {
     
     public static int NumPlayers()
     {
-        int players = 0;
+        int players = Players;
         players++;
+        if(players == 4)
+            players = 2;
         return(players);
     }
     
@@ -115,18 +121,5 @@ public class Player {
     public void setWinner() {
         winner = true;
     }
-
-
-//    public static void StringCentered(Graphics2D g,int xpos,int ypos,String text,String font,int size)
-//    {
-//        g.setFont (new Font (font,Font.PLAIN, size)); 
-//        int width = g.getFontMetrics().stringWidth(text);
-//        int height = g.getFontMetrics().getHeight();
-//        xpos = xpos - width/2;
-//        ypos = ypos - height/4;
-//        xpos = Window.getX(xpos);
-//        ypos = Window.getYNormal(ypos);
-//        g.drawString(text, xpos, ypos);           
-//    }   
     
 }
