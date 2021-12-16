@@ -8,7 +8,7 @@ public class Number extends Piece
 Number(Color _color,int zrow,int zcol)
     {
         super(_color);
-        num += numberAdd(zrow,zcol);
+        num = numberAdd(zrow,zcol);
     }    
     
     public static int numberAdd(int zrow,int zcol)
@@ -18,7 +18,7 @@ Number(Color _color,int zrow,int zcol)
         int value = num;
         for(int i=0;i<Board.getNumColumns();i++)
         {
-            if(zrow <= 1)
+            if(num <= 1)
             {
                 value++;
                 zrow++;
