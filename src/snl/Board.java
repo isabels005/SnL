@@ -16,14 +16,15 @@ public class Board {
     
     public static void DisplayPlayer()
     {
-       // Player currentPlayer = Player.GetCurrentTurn();
-        board[9][0] = new OvalPiece(Color.orange);
-       //board[9][0] = new OvalPiece(Player.GetCurrentTurn().getColor());
+        Player currentPlayer = Player.GetCurrentTurn();
+        board[9][0] = new OvalPiece(Player.GetCurrentTurn().getColor());
     }
     
-    public static void AddPlayer() {
-        Player.AddPlayers(Player.getStartingPlayers());
-    }
+    
+//    public static void AddPlayer() {
+//        Player.AddPlayers(Player.getStartingPlayers());
+//    }
+    
     public static void Draw(Graphics2D g) {
 //draw grid
         int ydelta = Window.getHeight2()/NUM_ROWS;

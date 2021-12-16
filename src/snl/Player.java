@@ -14,7 +14,7 @@ public class Player {
     public static void Reset()
     {
         StartingPlayers = 2;
-        int number = StartingPlayers; //CurrentPlayers;
+        int number = StartingPlayers;
         PlayerSelection(number);
     }
     
@@ -35,14 +35,14 @@ public class Player {
     {
         return players[1];
     }    
-    public static Player GetPlayer3()
-    {
-        return players[2];
-    }
-    public static Player GetPlayer4()
-    {
-        return players[3];
-    }    
+//    public static Player GetPlayer3()
+//    {
+//        return players[2];
+//    }
+//    public static Player GetPlayer4()
+//    {
+//        return players[3];
+//    }    
     
     public static boolean PlayerDisplay()
     {
@@ -54,11 +54,11 @@ public class Player {
         return(StartingPlayers);
     }
     
-    public static int AddPlayers(int players)
-    {
-        players++;
-        return(players);
-    }
+//    public static int AddPlayers(int players)
+//    {
+//        players++;
+//        return(players);
+//    }
     
     public static int NumPlayers()
     {
@@ -75,21 +75,21 @@ public class Player {
         players[1] = new Player(Color.blue);
         currentTurn = players[0];
     }
-    if (numPlayers == 3)
-    {
-        players[0] = new Player(Color.red);
-        players[1] = new Player(Color.blue);
-        players[2] = new Player(Color.yellow);
-        currentTurn = players[0];
-    }
-    if (numPlayers == 4)
-    {
-        players[0] = new Player(Color.red);
-        players[1] = new Player(Color.blue);
-        players[2] = new Player(Color.yellow);
-        players[3] = new Player(Color.green);
-        currentTurn = players[0];
-    }
+//    if (numPlayers == 3)
+//    {
+//        players[0] = new Player(Color.red);
+//        players[1] = new Player(Color.blue);
+//        players[2] = new Player(Color.yellow);
+//        currentTurn = players[0];
+//    }
+//    if (numPlayers == 4)
+//    {
+//        players[0] = new Player(Color.red);
+//        players[1] = new Player(Color.blue);
+//        players[2] = new Player(Color.yellow);
+//        players[3] = new Player(Color.green);
+//        currentTurn = players[0];
+//    }
     return(numPlayers);
 }
     
@@ -97,20 +97,12 @@ public class Player {
     public static Player GetOtherTurn() {
         if (currentTurn == players[0])
             return (players[1]);
-        if (currentTurn == players[1])
-            return (players[2]);
-        if (currentTurn == players[2])
-            return (players[3]);
         else
             return (players[0]);
     }    
     public static void SwitchTurn() {
         if (currentTurn == players[0])
             currentTurn = players[1];
-        else if (currentTurn == players[1])
-            currentTurn = players[2];
-        else if (currentTurn == players[2])
-            currentTurn = players[3];
         else
             currentTurn = players[0];
     }
