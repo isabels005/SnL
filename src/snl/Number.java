@@ -5,21 +5,25 @@ public class Number extends Piece
 {
     private static int num = 1;
 
-Number(Color _color,int row,int column)
+Number(Color _color,int zrow,int zcol)
     {
         super(_color);
-        num = numberAdd();
+        num += numberAdd(zrow,zcol);
     }    
     
-    public static int numberAdd()
+    public static int numberAdd(int zrow,int zcol)
     {
+        zrow = 0;
+        zcol = 0;
         int value = num;
         for(int i=0;i<Board.getNumColumns();i++)
         {
-            if(num >= 1)
+            if(zrow <= 1)
             {
                 value++;
+                zrow++;
             }
+            zrow++;
         }
         return value;
     }    
