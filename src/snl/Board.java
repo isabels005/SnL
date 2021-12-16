@@ -22,7 +22,7 @@ public class Board {
     }
     
     public static void AddPlayer() {
-        Player.NumPlayers();
+        Player.AddPlayers(Player.getStartingPlayers());
     }
     public static void Draw(Graphics2D g) {
 //draw grid
