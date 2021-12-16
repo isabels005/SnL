@@ -8,13 +8,13 @@ public class Player {
     private Color color;    
     private boolean winner;
     
-    private static int Players;
-    private static int CurrentPlayers = NumPlayers();
+    private static int StartingPlayers;
+    //private static int CurrentPlayers = ;
     
     public static void Reset()
     {
-        Players = 2;
-        int number = CurrentPlayers; //CurrentPlayers;
+        StartingPlayers = 2;
+        int number = StartingPlayers; //CurrentPlayers;
         PlayerSelection(number);
     }
     
@@ -49,12 +49,20 @@ public class Player {
         return true;
     }
     
+    public static int getStartingPlayers()
+    {
+        return(StartingPlayers);
+    }
+    
+    public static int AddPlayers(int players)
+    {
+        players++;
+        return(players);
+    }
+    
     public static int NumPlayers()
     {
-        int players = Players;
-        players++;
-        if(players == 4)
-            players = 2;
+        int players = StartingPlayers;
         return(players);
     }
     
