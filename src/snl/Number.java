@@ -4,30 +4,41 @@ import java.awt.*;
 public class Number extends Piece
 {
     private static int num = 1;
-
-Number(Color _color,int zrow,int zcol)
+    Number(Color _color,int zrow, int zcol) 
     {
         super(_color);
-        num = numberAdd(zrow,zcol);
-    }    
+//        System.out.println(NumArray(zrow,zcol));
+//        num = NumArray(zrow,zcol);
+    }
+    public int NumArray(int zrow, int zcol)
+     {
+//        if(zrow<10)
+//        {
+//        return(num);
+//        }
+//         
+         return 0;
+     }
+//Number(Color _color,int zrow,int zcol)
+//    {
+//        super(_color);
+//        num = numberAdd();
+//    }    
     
-    public static int numberAdd(int zrow,int zcol)
-    {
-        zrow = 0;
-        zcol = 0;
-        int value = num;
-        for(int i=0;i<Board.getNumColumns();i++)
-        {
-            if(num <= 1)
-            {
-                value++;
-                zrow++;
-            }
-            zrow++;
-        }
-        return value;
-    }    
-     
+//    public static int numberAdd()
+//    {
+//        int value = num;
+//        for(int i=0;i<Board.getNumColumns();i++)
+//        {
+//            if(num <= 1)
+//            {
+//                value++;
+//               
+//            }
+//           
+//        }
+//        return value;
+//    }    
 
 public void draw(Graphics2D g,int row,int column,int xdelta,int ydelta) 
 {
