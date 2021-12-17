@@ -15,6 +15,16 @@ public class Board {
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)
                 board[zrow][zcol] = null;
+        for (int zrow=0;zrow<NUM_ROWS;zrow++)
+        {
+            for (int zcol=0;zcol<NUM_COLUMNS;zcol++)        
+            {
+                
+                    board[zrow][zcol] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
+                    
+                
+            }
+        }
     }
     
     public static void DisplayPlayer()
@@ -71,26 +81,6 @@ public class Board {
                     board[zrow][zcol].draw(g, zrow, zcol,xdelta, ydelta);
             }
         }    
-        for (int zrow=0;zrow<NUM_ROWS;zrow++)
-        {
-            for (int zcol=0;zcol<NUM_COLUMNS;zcol++)        
-            {
-                
-                    
-                    Number numArray = new Number(Color.GREEN,zrow,zcol);
-//                    numArray=(new Number(Color.GREEN,4,4));
-//                    
-//                    board[zrow][zcol] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
-                    
-//                    board[zrow][1] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
-//                    board[zrow][2] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
-//                    board[zrow][3] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
-//                    board[zrow][4] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
-//                    board[zrow][5] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
-
-                
-            }
-        }         
         
         DisplayPlayer();
         
@@ -121,7 +111,11 @@ public class Board {
             StringCentered(g,250,554,"Player 2 is the Winner","Arial",30);
          }      
     }
-    
+    public static void checkPlayerLocation()
+    {
+
+    }
+
     public static int getNumColumns()
         {
             return(NUM_COLUMNS);

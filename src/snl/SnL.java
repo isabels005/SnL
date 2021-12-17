@@ -51,7 +51,7 @@ public class SnL extends JFrame implements Runnable {
                     {
                         Dice.Roll();
                         rollResult = true;
-//                        checkPlayerLocation();
+                        Board.checkPlayerLocation();
                         rollResult = false;
                     }
                     else
