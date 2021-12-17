@@ -14,7 +14,6 @@ public class Dice {
     {
         int value = number;
         number = DiceRollNumber();
-        SnL.diceRoll = false;
         return(number);
     }
     

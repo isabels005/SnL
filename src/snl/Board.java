@@ -115,8 +115,19 @@ public class Board {
     }
     public static void checkPlayerLocation()
     {
-
+        Player.GetCurrentTurn().GetCurrentLocation();
+        if ( =! null)
+        {
+            if ()
+            {}
+            else if ()
+            {}
+            else
+                return;
+        }
+           
     }
+    
 
     public static int getNumColumns()
         {
