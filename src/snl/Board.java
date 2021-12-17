@@ -25,7 +25,13 @@ public class Board {
     
     public static void PlayerMove()
     {     
-        board[row][column] = board[row][column+1];
+        column++;
+        if(column == 10)
+        {
+            column = 0;
+            row--;
+           System.out.println("E");
+        }
         System.out.println("Hello");
     }
     
