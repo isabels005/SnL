@@ -3,43 +3,21 @@ import java.awt.*;
 
 public class Number extends Piece
 {
-    private static int num = 1;
-    Number(Color _color,int zrow, int zcol) 
-    {
-        super(_color);
-//        System.out.println(NumArray(zrow,zcol));
-//        num = NumArray(zrow,zcol);
-    }
-    public int NumArray(int zrow, int zcol)
-     {
-//        if(zrow<10)
-//        {
-//        return(num);
-//        }
-//         
-         return 0;
-     }
-//Number(Color _color,int zrow,int zcol)
+    private static int StaticNum = 1;
+    private int num = 1;
+//    Number(Color _color,int zrow, int zcol) 
 //    {
 //        super(_color);
-//        num = numberAdd();
-//    }    
+//    }
     
-//    public static int numberAdd()
-//    {
-//        int value = num;
-//        for(int i=0;i<Board.getNumColumns();i++)
-//        {
-//            if(num <= 1)
-//            {
-//                value++;
-//               
-//            }
-//           
-//        }
-//        return value;
-//    }    
-
+Number(Color _color,int zrow,int zcol)
+    {
+        super(_color);
+//        num = numberAdd();
+    num = StaticNum;
+    StaticNum++;
+    }    
+    
 public void draw(Graphics2D g,int row,int column,int xdelta,int ydelta) 
 {
     g.setColor(getColor());
