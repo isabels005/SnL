@@ -5,6 +5,9 @@ public class Board {
     private final static int NUM_ROWS = 10;
     private final static int NUM_COLUMNS = 10;
 
+    private static int row = NUM_ROWS-1;
+    private static int column = NUM_COLUMNS-10; 
+    
     private static Piece board[][] = new Piece[NUM_ROWS][NUM_COLUMNS];
 
     public static void Reset() {
@@ -17,9 +20,14 @@ public class Board {
     public static void DisplayPlayer()
     {
         Player currentPlayer = Player.GetCurrentTurn();
-        board[9][0] = new OvalPiece(Player.GetCurrentTurn().getColor());
+        board[row][column] = new OvalPiece(Player.GetCurrentTurn().getColor());
     }
     
+    public static void PlayerMove()
+    {     
+        board[row][column] = board[row][column+1];
+        System.out.println("Hello");
+    }
     
 //    public static void AddPlayer() {
 //        Player.AddPlayers(Player.getStartingPlayers());
@@ -81,22 +89,21 @@ public class Board {
         }
         
         
-        //needs fixes
-//        if (Player.GetCurrentTurn().isWinner() && Player.GetOtherTurn().isWinner())
-//        {
-//            g.setColor(Color.blue);
-//            StringCentered(g,250,554,"We Have World Peace","Arial",30);
-//        }
-//        else if (Player.GetPlayer1().isWinner())
-//        {
-//            g.setColor(Player.GetPlayer1().getColor());
-//            StringCentered(g,250,554,"Player 1 is the Winner","Arial",30);
-//        }
-//        else if (Player.GetPlayer2().isWinner())
-//        {
-//            g.setColor(Player.GetPlayer2().getColor());
-//            StringCentered(g,250,554,"Player 2 is the Winner","Arial",30);
-//         }      
+        if (Player.GetCurrentTurn().isWinner() && Player.GetOtherTurn().isWinner())
+        {
+            g.setColor(Color.blue);
+            StringCentered(g,250,554,"It's a tie!","Arial",30);
+        }
+        else if (Player.GetPlayer1().isWinner())
+        {
+            g.setColor(Player.GetPlayer1().getColor());
+            StringCentered(g,250,554,"Player 1 is the Winner","Arial",30);
+        }
+        else if (Player.GetPlayer2().isWinner())
+        {
+            g.setColor(Player.GetPlayer2().getColor());
+            StringCentered(g,250,554,"Player 2 is the Winner","Arial",30);
+         }      
     }
     
     public static int getNumColumns()
