@@ -63,8 +63,10 @@ public class Board {
             {
                 
                     
-                    
-                    board[zrow][zcol] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
+                    Number numArray = new Number(Color.GREEN,zrow,zcol);
+//                    numArray=(new Number(Color.GREEN,4,4));
+//                    
+//                    board[zrow][zcol] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
                     
 //                    board[zrow][1] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
 //                    board[zrow][2] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
@@ -127,4 +129,6 @@ public class Board {
         ypos = Window.getYNormal(ypos);
         g.drawString(text, xpos, ypos);           
     }   
+
+    
 }
