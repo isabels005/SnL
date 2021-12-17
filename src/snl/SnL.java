@@ -47,17 +47,17 @@ public class SnL extends JFrame implements Runnable {
             public void mousePressed(MouseEvent e) {
 
                 if (e.BUTTON1 == e.getButton() ) {
-                    if (diceRoll)
-                    {
+//                    if (diceRoll)
+//                    {
                         Dice.Roll();
-                        rollResult = true;
-                        Board.checkPlayerLocation();
-                        rollResult = false;
-                    }
-                    else
-                    {
-                        return;
-                    }
+//                        rollResult = true;
+//                        Board.checkPlayerLocation();
+//                        rollResult = false;
+//                    }
+//                    else
+//                    {
+//                        return;
+//                    }
                         
 //                    else
 //                        playerNum++;
