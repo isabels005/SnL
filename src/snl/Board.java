@@ -20,7 +20,7 @@ public class Board {
         {
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)        
             {
-                board[zrow][zcol]= new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
+                board[zrow][zcol+1]= new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
             }
         }
     }
@@ -109,20 +109,20 @@ public class Board {
             StringCentered(g,250,554,"Player 2 is the Winner","Arial",30);
          }      
     }
-    public static void checkPlayerLocation()
-    {
-        Player.GetCurrentTurn().GetCurrentLocation();
-        if ( =! null)
-        {
-            if ()
-            {}
-            else if ()
-            {}
-            else
-                return;
-        }
-           
-    }
+//    public static void checkPlayerLocation()
+//    {
+//        Player.GetCurrentTurn().GetCurrentLocation();
+//        if ( =! null)
+//        {
+//            if ()
+//            {}
+//            else if ()
+//            {}
+//            else
+//                return;
+//        }
+//           
+//    }
     
 
     public static int getNumColumns()

@@ -4,7 +4,7 @@ import java.awt.*;
 public class Number extends Piece
 {
     private static int StaticNum = 100;
-    private int num = 100;
+    private int num = 1;
 Number(Color _color,int zrow,int zcol)
     {
         super(_color);
