@@ -71,8 +71,8 @@ public class Player {
     
     if (numPlayers == 2)
     {
-        players[0] = new Player(Color.red);
-        players[1] = new Player(Color.blue);
+        players[0] = new Player(Color.orange);
+        players[1] = new Player(Color.magenta);
         currentTurn = players[0];
     }
 //    if (numPlayers == 3)

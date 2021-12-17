@@ -65,6 +65,7 @@ public class SnL extends JFrame implements Runnable {
                 }
 
                 if (e.BUTTON3 == e.getButton()) {
+                  Board.PlayerMove();
                   
                   
                 }
