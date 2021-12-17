@@ -20,19 +20,27 @@ public class Board {
     public static void DisplayPlayer()
     {
         Player currentPlayer = Player.GetCurrentTurn();
-        board[row][column] = new OvalPiece(Player.GetCurrentTurn().getColor());
+        board[row][column] = new OvalPiece(currentPlayer.getColor());
+//        if( == true)
+//        {
+//        Player.SwitchTurn();
+//        board[row][column] = new OvalPiece(currentPlayer.getColor());
+//        }
     }
     
     public static void PlayerMove()
     {     
-        column++;
-        if(column == 10)
+        int move = Dice.number;
+        boolean turnFinished = false;
+        column += move;
+        
+        if(column >= 10)
         {
             column = 0;
             row--;
-           System.out.println("E");
+           System.out.println("Moved up");
         }
-        System.out.println("Hello");
+        System.out.println("Moved forward");
     }
     
 //    public static void AddPlayer() {
