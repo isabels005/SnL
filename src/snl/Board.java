@@ -15,24 +15,42 @@ public class Board {
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)
                 board[zrow][zcol] = null;
+        for (int zrow=0;zrow<NUM_ROWS;zrow++)
+        {
+            for (int zcol=0;zcol<NUM_COLUMNS;zcol++)        
+            {
+                
+                    board[zrow][zcol] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
+                    
+                
+            }
+        }
     }
     
     public static void DisplayPlayer()
     {
         Player currentPlayer = Player.GetCurrentTurn();
-        board[row][column] = new OvalPiece(Player.GetCurrentTurn().getColor());
+        board[row][column] = new OvalPiece(currentPlayer.getColor());
+//        if( == true)
+//        {
+//        Player.SwitchTurn();
+//        board[row][column] = new OvalPiece(currentPlayer.getColor());
+//        }
     }
     
     public static void PlayerMove()
     {     
-        column++;
-        if(column == 10)
+        int move = Dice.number;
+        boolean turnFinished = false;
+        column += move;
+        
+        if(column >= 10)
         {
             column = 0;
             row--;
-           System.out.println("E");
+           System.out.println("Moved up");
         }
-        System.out.println("Hello");
+        System.out.println("Moved forward");
     }
     
 //    public static void AddPlayer() {
@@ -63,26 +81,6 @@ public class Board {
                     board[zrow][zcol].draw(g, zrow, zcol,xdelta, ydelta);
             }
         }    
-        for (int zrow=0;zrow<NUM_ROWS;zrow++)
-        {
-            for (int zcol=0;zcol<NUM_COLUMNS;zcol++)        
-            {
-                
-                    
-                    Number numArray = new Number(Color.GREEN,zrow,zcol);
-//                    numArray=(new Number(Color.GREEN,4,4));
-//                    
-//                    board[zrow][zcol] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
-                    
-//                    board[zrow][1] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
-//                    board[zrow][2] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
-//                    board[zrow][3] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
-//                    board[zrow][4] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
-//                    board[zrow][5] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
-
-                
-            }
-        }         
         
         DisplayPlayer();
         
