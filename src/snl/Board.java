@@ -15,14 +15,12 @@ public class Board {
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)
                 board[zrow][zcol] = null;
+        
         for (int zrow=0;zrow<NUM_ROWS;zrow++)
         {
             for (int zcol=0;zcol<NUM_COLUMNS;zcol++)        
             {
-                
-                    board[zrow][zcol] = new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
-                    
-                
+                board[zrow][zcol]= new Number(Color.GREEN,NUM_ROWS,NUM_COLUMNS);
             }
         }
     }
