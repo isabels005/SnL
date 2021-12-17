@@ -9,7 +9,8 @@ import javax.swing.*;
 public class SnL extends JFrame implements Runnable {
     boolean animateFirstTime = true;
     boolean chooseNumPlayers = true;
-    static boolean diceRoll = true;    
+    static boolean diceRoll = true; 
+    static boolean rollResult = false; 
     Image image;
     Graphics2D g;
     
@@ -47,7 +48,17 @@ public class SnL extends JFrame implements Runnable {
 
                 if (e.BUTTON1 == e.getButton() ) {
                     if (diceRoll)
+                    {
                         Dice.Roll();
+                        rollResult = true;
+//                        checkPlayerLocation();
+                        rollResult = false;
+                    }
+                    else
+                    {
+                        return;
+                    }
+                        
 //                    else
 //                        playerNum++;
                     
