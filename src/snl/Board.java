@@ -113,7 +113,11 @@ public class Board {
             StringCentered(g,250,554,"Player 2 is the Winner","Arial",30);
          }      
     }
-    
+    public static void checkPlayerLocation()
+    {
+
+    }
+
     public static int getNumColumns()
         {
             return(NUM_COLUMNS);
